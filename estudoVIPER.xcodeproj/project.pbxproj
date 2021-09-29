@@ -56,6 +56,11 @@
 		E10E161A2704B8B70009E62B /* estudoVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				E10E1633270506B00009E62B /* Recursos */,
+				E10E1632270502760009E62B /* Utilitarios */,
+				E10E1631270501FD0009E62B /* Modulos */,
+				E10E16302704C3CE0009E62B /* InterfacesExternas */,
+				E10E162F2704C3B50009E62B /* Entidades */,
 				E10E161B2704B8B70009E62B /* AppDelegate.swift */,
 				E10E161D2704B8B70009E62B /* SceneDelegate.swift */,
 				E10E161F2704B8B70009E62B /* ViewController.swift */,
@@ -65,6 +70,41 @@
 				E10E16292704B8BB0009E62B /* Info.plist */,
 			);
 			path = estudoVIPER;
+			sourceTree = "<group>";
+		};
+		E10E162F2704C3B50009E62B /* Entidades */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entidades;
+			sourceTree = "<group>";
+		};
+		E10E16302704C3CE0009E62B /* InterfacesExternas */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InterfacesExternas;
+			sourceTree = "<group>";
+		};
+		E10E1631270501FD0009E62B /* Modulos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modulos;
+			sourceTree = "<group>";
+		};
+		E10E1632270502760009E62B /* Utilitarios */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilitarios;
+			sourceTree = "<group>";
+		};
+		E10E1633270506B00009E62B /* Recursos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Recursos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
