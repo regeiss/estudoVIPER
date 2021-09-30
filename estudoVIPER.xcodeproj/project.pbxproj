@@ -13,6 +13,8 @@
 		E10E16232704B8B70009E62B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10E16212704B8B70009E62B /* Main.storyboard */; };
 		E10E16252704B8BB0009E62B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10E16242704B8BB0009E62B /* Assets.xcassets */; };
 		E10E16282704B8BB0009E62B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10E16262704B8BB0009E62B /* LaunchScreen.storyboard */; };
+		E1540C6C2706250E00065DB9 /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1540C6B2706250E00065DB9 /* Interfaces.swift */; };
+		E1540C6E2706293E00065DB9 /* NetworkShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1540C6D2706293E00065DB9 /* NetworkShared.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		E10E16242704B8BB0009E62B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E10E16272704B8BB0009E62B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E10E16292704B8BB0009E62B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1540C662706075300065DB9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E1540C6B2706250E00065DB9 /* Interfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interfaces.swift; sourceTree = "<group>"; };
+		E1540C6D2706293E00065DB9 /* NetworkShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkShared.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +61,8 @@
 		E10E161A2704B8B70009E62B /* estudoVIPER */ = {
 			isa = PBXGroup;
 			children = (
-				E10E1633270506B00009E62B /* Recursos */,
+				E10E1633270506B00009E62B /* LogicaAplicacao */,
+				E1540C64270606DC00065DB9 /* LogicaNegocio */,
 				E10E1632270502760009E62B /* Utilitarios */,
 				E10E1631270501FD0009E62B /* Modulos */,
 				E10E16302704C3CE0009E62B /* InterfacesExternas */,
@@ -68,6 +74,7 @@
 				E10E16242704B8BB0009E62B /* Assets.xcassets */,
 				E10E16262704B8BB0009E62B /* LaunchScreen.storyboard */,
 				E10E16292704B8BB0009E62B /* Info.plist */,
+				E1540C652706071200065DB9 /* Doc */,
 			);
 			path = estudoVIPER;
 			sourceTree = "<group>";
@@ -82,6 +89,8 @@
 		E10E16302704C3CE0009E62B /* InterfacesExternas */ = {
 			isa = PBXGroup;
 			children = (
+				E10E1634270507760009E62B /* Rede */,
+				E1540C6B2706250E00065DB9 /* Interfaces.swift */,
 			);
 			path = InterfacesExternas;
 			sourceTree = "<group>";
@@ -100,11 +109,66 @@
 			path = Utilitarios;
 			sourceTree = "<group>";
 		};
-		E10E1633270506B00009E62B /* Recursos */ = {
+		E10E1633270506B00009E62B /* LogicaAplicacao */ = {
+			isa = PBXGroup;
+			children = (
+				E1540C69270621D000065DB9 /* Presenter */,
+				E1540C68270621C500065DB9 /* Router */,
+				E1540C67270620ED00065DB9 /* Rede */,
+			);
+			path = LogicaAplicacao;
+			sourceTree = "<group>";
+		};
+		E10E1634270507760009E62B /* Rede */ = {
+			isa = PBXGroup;
+			children = (
+				E1540C6D2706293E00065DB9 /* NetworkShared.swift */,
+			);
+			path = Rede;
+			sourceTree = "<group>";
+		};
+		E1540C64270606DC00065DB9 /* LogicaNegocio */ = {
+			isa = PBXGroup;
+			children = (
+				E1540C6A270621F900065DB9 /* Interactor */,
+			);
+			path = LogicaNegocio;
+			sourceTree = "<group>";
+		};
+		E1540C652706071200065DB9 /* Doc */ = {
+			isa = PBXGroup;
+			children = (
+				E1540C662706075300065DB9 /* README.md */,
+			);
+			path = Doc;
+			sourceTree = "<group>";
+		};
+		E1540C67270620ED00065DB9 /* Rede */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Recursos;
+			path = Rede;
+			sourceTree = "<group>";
+		};
+		E1540C68270621C500065DB9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E1540C69270621D000065DB9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E1540C6A270621F900065DB9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,8 +243,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E10E16202704B8B70009E62B /* ViewController.swift in Sources */,
+				E1540C6E2706293E00065DB9 /* NetworkShared.swift in Sources */,
 				E10E161C2704B8B70009E62B /* AppDelegate.swift in Sources */,
 				E10E161E2704B8B70009E62B /* SceneDelegate.swift in Sources */,
+				E1540C6C2706250E00065DB9 /* Interfaces.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
