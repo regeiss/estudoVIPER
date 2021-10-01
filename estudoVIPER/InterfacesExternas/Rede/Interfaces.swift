@@ -23,9 +23,6 @@ public enum NetworkErrorCode: Int
     case missingFieldError
 }
 
-
-
-
 // MARK: HTTP Status
 
 public enum HTTPStatusCode: Int
