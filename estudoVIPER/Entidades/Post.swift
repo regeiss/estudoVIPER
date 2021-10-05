@@ -31,17 +31,15 @@ public protocol PostDetail: PostSummary
     var runtime: TimeInterval? { get }
 }
 
-
 public enum PostFilterAttribute
 {
-    case language
-    case releaseDate
-    case isAdult
+    case title
+    case boody
+    case userIdentifier
 }
-
 
 public enum PostSortAttribute
 {
-    case popularity
-    case releaseDate
+    case userIdentifier
+    case title
 }

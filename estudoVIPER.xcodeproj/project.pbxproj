@@ -13,13 +13,14 @@
 		E10E16232704B8B70009E62B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10E16212704B8B70009E62B /* Main.storyboard */; };
 		E10E16252704B8BB0009E62B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10E16242704B8BB0009E62B /* Assets.xcassets */; };
 		E10E16282704B8BB0009E62B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10E16262704B8BB0009E62B /* LaunchScreen.storyboard */; };
-		E1540C6C2706250E00065DB9 /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1540C6B2706250E00065DB9 /* Interfaces.swift */; };
+		E1540C6C2706250E00065DB9 /* Diversos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1540C6B2706250E00065DB9 /* Diversos.swift */; };
 		E1540C6E2706293E00065DB9 /* NetworkShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1540C6D2706293E00065DB9 /* NetworkShared.swift */; };
 		E1540C70270647A800065DB9 /* PostDataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1540C6F270647A800065DB9 /* PostDataAdapter.swift */; };
 		E1540C72270649F800065DB9 /* PostDatabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1540C71270649F800065DB9 /* PostDatabaseClient.swift */; };
 		E1540C7427064E8200065DB9 /* Protocolos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1540C7327064E8200065DB9 /* Protocolos.swift */; };
 		E1540C7627065AC200065DB9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1540C7527065AC200065DB9 /* Post.swift */; };
 		E1540C7827065B7200065DB9 /* ProtocoloLogica.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1540C7727065B7200065DB9 /* ProtocoloLogica.swift */; };
+		E1540C7B27079B9A00065DB9 /* DataHora.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1540C7A27079B9A00065DB9 /* DataHora.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,13 +33,14 @@
 		E10E16272704B8BB0009E62B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E10E16292704B8BB0009E62B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1540C662706075300065DB9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E1540C6B2706250E00065DB9 /* Interfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interfaces.swift; sourceTree = "<group>"; };
+		E1540C6B2706250E00065DB9 /* Diversos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diversos.swift; sourceTree = "<group>"; };
 		E1540C6D2706293E00065DB9 /* NetworkShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkShared.swift; sourceTree = "<group>"; };
 		E1540C6F270647A800065DB9 /* PostDataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataAdapter.swift; sourceTree = "<group>"; };
 		E1540C71270649F800065DB9 /* PostDatabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDatabaseClient.swift; sourceTree = "<group>"; };
 		E1540C7327064E8200065DB9 /* Protocolos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Protocolos.swift; path = estudoVIPER/InterfacesExternas/Protocolos.swift; sourceTree = SOURCE_ROOT; };
 		E1540C7527065AC200065DB9 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E1540C7727065B7200065DB9 /* ProtocoloLogica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocoloLogica.swift; sourceTree = "<group>"; };
+		E1540C7A27079B9A00065DB9 /* DataHora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHora.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		E10E1632270502760009E62B /* Utilitarios */ = {
 			isa = PBXGroup;
 			children = (
+				E1540C7927079B5200065DB9 /* FuncoesDataHora */,
 			);
 			path = Utilitarios;
 			sourceTree = "<group>";
@@ -125,7 +128,7 @@
 		E10E1634270507760009E62B /* Rede */ = {
 			isa = PBXGroup;
 			children = (
-				E1540C6B2706250E00065DB9 /* Interfaces.swift */,
+				E1540C6B2706250E00065DB9 /* Diversos.swift */,
 				E1540C6D2706293E00065DB9 /* NetworkShared.swift */,
 				E1540C71270649F800065DB9 /* PostDatabaseClient.swift */,
 			);
@@ -176,6 +179,14 @@
 			children = (
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E1540C7927079B5200065DB9 /* FuncoesDataHora */ = {
+			isa = PBXGroup;
+			children = (
+				E1540C7A27079B9A00065DB9 /* DataHora.swift */,
+			);
+			path = FuncoesDataHora;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +266,9 @@
 				E1540C72270649F800065DB9 /* PostDatabaseClient.swift in Sources */,
 				E1540C70270647A800065DB9 /* PostDataAdapter.swift in Sources */,
 				E10E161E2704B8B70009E62B /* SceneDelegate.swift in Sources */,
+				E1540C7B27079B9A00065DB9 /* DataHora.swift in Sources */,
 				E1540C7627065AC200065DB9 /* Post.swift in Sources */,
-				E1540C6C2706250E00065DB9 /* Interfaces.swift in Sources */,
+				E1540C6C2706250E00065DB9 /* Diversos.swift in Sources */,
 				E1540C7827065B7200065DB9 /* ProtocoloLogica.swift in Sources */,
 				E1540C7427064E8200065DB9 /* Protocolos.swift in Sources */,
 			);
