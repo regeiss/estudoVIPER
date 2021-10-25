@@ -6,11 +6,8 @@
 //
 
 import Foundation
-//public func makeMovieDatabaseClient() -> MovieDataProvider {
-//    return MovieDatabaseClient()
-//}
 
-// MARK: Network Errors
+// MARK: Erros Network 
 
 public enum NetworkErrorCode: Int
 {

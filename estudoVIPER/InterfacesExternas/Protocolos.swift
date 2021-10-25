@@ -8,20 +8,23 @@
 
 // MARK: Routers
 
+import UIKit
 
-public protocol PostBrowserWireframe: class {
+public protocol PostBrowserWireframe: AnyObject
+{
     var rootViewController: UIViewController { get }
     func present(PostDetail: PostDetailPresenter, from: UIViewController)
     func present(error: Error, from sourceVC: UIViewController, retryHandler: (() -> Void)? )
 }
 
-public func createPostBrowserWireframe(dataProvider: PostDataProvider) -> PostBrowserWireframe {
-    PostBrowserWireframeImp(dataProvider: dataProvider)
-}
+//public func createPostBrowserWireframe(dataProvider: PostDataProvider) -> PostBrowserWireframe
+//{
+//    PostBrowserWireframeImp(dataProvider: dataProvider)
+//}
 
 // MARK: PostListPresenter
 
-public protocol PostListPresenter: class {
+public protocol PostListPresenter: AnyObject {
     var output: PostListPresenterOutput? {get set}
     var numberOfItems: Int { get }
     func configureCell(_ cell: PostSummaryCell, forItemAt: Int)
@@ -32,13 +35,14 @@ public protocol PostListPresenter: class {
 }
 
 
-public protocol PostListPresenterOutput: UIViewController {
+public protocol PostListPresenterOutput: UIViewController
+{
     func presenter(_ presenter: PostListPresenter, didAddItemsAt indexes: IndexSet)
 }
 
 // MARK: PostDetailPresenter
 
-public protocol PostDetailPresenter: class {
+public protocol PostDetailPresenter: AnyObject {
     var output: PostDetailPresenterOutput? {get set}
     var hasDetail: Bool { get }
     
@@ -59,7 +63,8 @@ public protocol PostDetailPresenterOutput: UIViewController {
 
 // MARK: Views
 
-public protocol PostSummaryCell: class {
+public protocol PostSummaryCell: AnyObject
+{
     var PostID: PostIdentifier? {get set}
     func setPostOriginalTitle(_ title: String?)
 }
@@ -77,7 +82,8 @@ protocol DetailViewController: UIViewController {
 
 
 // MARK: Data Provider
-public protocol PostSummaryResult {
+public protocol PostSummaryResult
+{
     var pageNumber: UInt? { get }
     var totalResults: UInt? { get }
     var totalPages: UInt? { get }
@@ -85,13 +91,15 @@ public protocol PostSummaryResult {
 }
 
 
-public protocol PostDataProvider {
+public protocol PostDataProvider
+{
     var defaultPageSize: Int { get }
     func fetchPostSummaries(
         filter: [(attribute: PostFilterAttribute, value: Any, isAscending: Bool)],
         sort: (attribute: PostSortAttribute, isAscending: Bool)?,
         pageNumber: Int?,
-        resultReceiver: @escaping ( _ : Result<PostSummaryResult>) -> Void )
-    func fetchPostDetail(PostID: PostIdentifier, resultReceiver: @escaping (Result<PostDetail>) -> Void)
+        resultReceiver: @escaping ( _ : Result<PostSummaryResult, Error> ) -> Void )
+    
+    func fetchPostDetail(PostID: PostIdentifier, resultReceiver: @escaping (Result<PostDetail, Error>) -> Void)
 }
 

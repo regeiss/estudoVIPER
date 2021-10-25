@@ -19,10 +19,10 @@ public protocol PostIdentifier
 
 public protocol PostSummary
 {
-    var id: Int { get }
-    var title: String { get }
-    var body: String { get }
-    var userIdentifier: Int { get }
+    var id: Int? { get }
+    var title: String? { get }
+    var body: String? { get }
+    var userIdentifier: Int? { get }
 }
 
 public protocol PostDetail: PostSummary
@@ -34,7 +34,7 @@ public protocol PostDetail: PostSummary
 public enum PostFilterAttribute
 {
     case title
-    case boody
+    case body
     case userIdentifier
 }
 

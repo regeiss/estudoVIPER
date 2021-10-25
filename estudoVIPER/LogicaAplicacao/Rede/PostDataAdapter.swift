@@ -7,8 +7,8 @@
 
 import Foundation
 
-class PostDataAdapter: PostDataStore
-{
-    
-
-}
+//class PostDataAdapter: PostDataStore
+//{
+//
+//
+//}
